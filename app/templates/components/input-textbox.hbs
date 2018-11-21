@@ -1,0 +1,7 @@
+{{yield}}
+
+     {{#paper-card as |card|}}
+{{paper-input textarea=true block=true label="Input" passThru=(hash rows=1 maxRows=5)
+  value=input onChange=(action (mut input)) iconRight="send"}}
+     
+    {{/paper-card}}

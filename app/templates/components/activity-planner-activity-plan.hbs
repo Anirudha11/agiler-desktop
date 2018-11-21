@@ -1,0 +1,30 @@
+{{yield}}
+  {{!-- <div class="layout-row layout-align-start"> --}}
+  
+    {{#paper-card class="b" as |card|}}
+      {{#card.title as |title|}}
+        {{#title.text as |text|}}
+          {{#text.headline}}Activity Plan{{/text.headline}}
+        {{paper-divider}}
+        {{#paper-list}}
+        {{#each activityPlanTasks as |x|}}
+        {{#paper-item}}{{x}}{{/paper-item}}
+        {{/each}}
+       {{!-- <div id="target" ondragenter="event.preventDefault();"{{action "foo1"}} ondragover="event.preventDefault();" ondrop={{action "drop_handler" task}} style="width:100vw; height:100px;">Drop Zone</div> --}}
+       {{!-- {{#draggable-object-target action=(action 'drop_handler' task)}} --}}
+
+       {{#draggable-item dropped="addTask"}}
+       <div style="height:40px; background-color:pink">
+  Drop here
+       </div>
+  {{/draggable-item}}
+ 
+{{/paper-list}}
+        {{/title.text}}
+      {{/card.title}}
+      {{#card.actions}}
+       {{#paper-button iconButton=true}}
+  {{paper-icon "publish"}}
+  {{/paper-button}}
+  {{/card.actions}}
+    {{/paper-card}}

@@ -1,0 +1,19 @@
+{{yield}}
+{{!-- <div class="layout-row layout-xs-row"> --}}
+  {{!-- <div class="layout-row layout-align-start-start"> --}}
+ 
+    {{#paper-card class="a" as |card|}}
+      {{#card.title as |title|}}
+        {{#title.text as |text|}}
+          {{#text.headline}}Pending{{/text.headline}}
+          {{paper-divider}}
+        {{#paper-list}}
+        {{#paper-item}}Task1{{/paper-item}}
+        {{#paper-item}}Task2{{/paper-item}}
+        {{#paper-item}}Task3{{/paper-item}}
+        {{/paper-list}}
+        {{/title.text}}
+      {{/card.title}}
+    {{/paper-card}}
+    {{!-- </div> --}}
+    {{!-- </div> --}}

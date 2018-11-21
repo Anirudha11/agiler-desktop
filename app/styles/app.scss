@@ -1,0 +1,13 @@
+@import 'ember-paper';
+.layout-align-start-start{
+    display: flex;
+    justify-content: space-around;
+}
+.a {
+    width: 13vw;
+    background-color: whitesmoke;
+}
+
+.b {
+    background-color: whitesmoke;
+}
